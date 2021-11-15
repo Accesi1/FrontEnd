@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <img src="../../../assets/img/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+  <span>
+    Accesi1
+  </span>
+  <span class="example-spacer"></span>
+  <span class="example-spacer"></span>
+  <button mat-button *ngFor="let item of menu" [routerLink]="item.redirect">{{ item.nombre }}</button>
+</mat-toolbar>

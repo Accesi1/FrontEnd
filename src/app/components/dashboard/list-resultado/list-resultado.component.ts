@@ -50,13 +50,7 @@ export class ListResultadoComponent implements OnInit {
       console.log('DATA: ', data);
       this.principios = data;
       this.url = data[4].detalle.substring(8, );
-      if(this.url === "www.washington.edu/accesscomputing/AU/before.html"){
-        for(let i=0; i<38; i++){
-          this.resultados.push('No cumple');
-          this.resultado.push(false);
-        }
-      } else {
-        data.forEach((principio: Post) => {
+      data.forEach((principio: Post) => {
           if(principio.codigo !== '5') {
             principio.pautas.forEach((pauta: Pauta) => {
               pauta.criterios.forEach((criterio: Criterio) => {
@@ -81,7 +75,6 @@ export class ListResultadoComponent implements OnInit {
             })
           }
         })
-      }
 
       var aux = 0;
       this.resultado.forEach(res => {
